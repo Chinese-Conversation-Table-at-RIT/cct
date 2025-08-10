@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>Events</title>
-	<meta name="events" content="Chinese Conversation Table Events" />
+	<meta name="description" content="Chinese Conversation Table Events" />
 </svelte:head>
 
 <div class="text-column">
