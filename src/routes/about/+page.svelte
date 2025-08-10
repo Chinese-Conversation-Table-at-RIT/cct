@@ -6,6 +6,7 @@
 <div class="text-column">
 	<h1>About this app</h1>
 
+    <iframe src="https://calendar.google.com/calendar/embed?src=xs3171%40g.rit.edu&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	<p>
 		This is a <a href="https://svelte.dev/docs/kit">SvelteKit</a> app. You can make your own by typing
 		the following into your command line and following the prompts:
