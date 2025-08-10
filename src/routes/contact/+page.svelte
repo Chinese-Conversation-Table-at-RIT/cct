@@ -1,136 +1,91 @@
 <script>
-    let name = "";
-    let email = "";
-    let subject = "";
-    let content = "";
+  import emailjs from 'emailjs-com';
 
-    const presetEmail = "rst4035@rit.edu";
+  let name = '';
+  let email = '';
+  let message = '';
+  let status = '';
 
-    function sendEmail() {
-        let body = "";
-        if (name) body += `Name: ${name}\n`;
-        if (email) body += `Email: ${email}\n`;
-        body += `\n${content}`;
+  const SERVICE_ID = 'service_jkq5b3u';
+  const TEMPLATE_ID = 'template_pkf9tia';
+  const PUBLIC_KEY = 'Rck1sjqBH0dNeF-aW';
 
-        const mailtoLink = `mailto:${presetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
+  const sendEmail = async () => {
+    if (!name || !email || !message) {
+      status = "Please fill in all fields.";
+      return;
     }
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        { from_name: name, from_email: email, message },
+        PUBLIC_KEY
+      );
+      status = "✅ Message sent successfully!";
+      name = email = message = '';
+    } catch (error) {
+      console.error("Email send error:", error);
+      status = "❌ Failed to send message. Try again.";
+    }
+  };
 </script>
 
-<svelte:head>
-    <title>Contact Us</title>
-    <meta name="description" content="Contact Information for the Chinese Conversation Table" />
-</svelte:head>
-
-<div class="container">
-    <div class="text-column">
-        <h1>Contact Us</h1>
-
-        <div class="contact-info">
-            <p>Email Address: {presetEmail}</p>
-            <p>Instagram: someInstagramName</p>
-            <p>Campus Groups: ourCampusGroupLink</p>
-        </div>
-
-        <h2>Send us a message</h2>
-        <form on:submit|preventDefault={sendEmail} class="contact-form">
-            <label>
-                Name (optional):
-                <input type="text" bind:value={name}>
-            </label>
-
-            <label>
-                Email (optional):
-                <input type="email" bind:value={email}>
-            </label>
-
-            <label>
-                Subject (optional):
-                <input type="text" bind:value={subject}>
-            </label>
-
-            <label>
-                Message:
-                <textarea bind:value={content} required></textarea>
-            </label>
-
-            <button type="submit">Send Email</button>
-        </form>
-    </div>
+<div class="contact-container">
+  <h2>📧 Send Me a Message</h2>
+  <input type="text" placeholder="Your Gmail Name" bind:value={name} />
+  <input type="email" placeholder="Your Gmail Address" bind:value={email} />
+  <textarea placeholder="Your message..." bind:value={message}></textarea>
+  <button on:click={sendEmail}>Send</button>
+  {#if status}
+    <p class="status">{status}</p>
+  {/if}
 </div>
 
 <style>
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
-        font-family: Arial, sans-serif;
-    }
-
-    .text-column {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 400px;
-        width: 100%;
-    }
-
-    .contact-info p {
-        margin: 0.3rem 0;
-        font-size: 0.95rem;
-        color: #333;
-    }
-
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-
-    label {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-        color: #555;
-        text-align: left;
-    }
-
-    input, textarea {
-        padding: 0.5rem;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-top: 0.3rem;
-        transition: border 0.2s;
-    }
-
-    input:focus, textarea:focus {
-        border-color: #4a90e2;
-        outline: none;
-    }
-
-    textarea {
-        min-height: 100px;
-        resize: vertical;
-    }
-
-    button {
-        padding: 0.7rem;
-        font-size: 1rem;
-        color: white;
-        background-color: #4a90e2;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-
-    button:hover {
-        background-color: #357ABD;
-    }
+  .contact-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: system-ui, sans-serif;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  input, textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+  }
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  button {
+    background: #1a73e8;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #155ab6;
+  }
+  .status {
+    text-align: center;
+    font-weight: bold;
+  }
 </style>
