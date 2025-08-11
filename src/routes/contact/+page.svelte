@@ -33,6 +33,9 @@
   </script>
   
   <div class="contact-container">
+    <h1>Connect with us!</h1>
+    <h2>Instagram: link</h2>
+    <h2><a href="https://campusgroups.rit.edu/cct" target="_blank" rel="noopener noreferrer">CampusGroups</a></h2>
     <h2>📧 Feel free to reach out here!</h2>
     <input type="text" placeholder="Name (optional)" bind:value={name} />
     <input type="email" placeholder="Contact (optional)" bind:value={email} />
