@@ -8,22 +8,22 @@
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #1e1e1e 0%, #121212 70%);
+    background: linear-gradient(135deg, #d9f0ff 0%, #a3c4f3 70%); /* frosty pale blue sky */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fca311;
+    color: #2a423d; /* deep pine green */
   }
   .welcome-box {
-    background-color: #2f3437;
-    border: 2px solid #6c757d;
+    background-color: #e6f0e8; /* soft snow white */
+    border: 3px solid #5a6f54; /* pine green dark */
     padding: 3rem 4rem;
-    border-radius: 16px;
-    box-shadow: 0 0 15px 4px rgba(173, 216, 230, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(60, 130, 180, 0.5); /* pale blue glow */
     text-align: center;
-    max-width: 400px;
+    max-width: 420px;
     margin-bottom: 2rem;
   }
   h1 {
@@ -32,16 +32,20 @@
     font-weight: 900;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #fca311aa, 0 0 20px #fca31177;
+    color: #264d40; /* deep pine */
+    text-shadow:
+      0 0 6px #a3c4f3aa,
+      0 0 12px #a3c4f344; /* subtle pale blue glow */
   }
   .carousel {
     position: relative;
-    width: 400px;
-    height: 250px;
-    border-radius: 12px;
+    width: 420px;
+    height: 270px;
+    border-radius: 20px;
     overflow: hidden;
-    border: 2px solid #6c757d;
-    box-shadow: 0 0 15px 4px rgba(173, 216, 230, 0.3);
+    border: 3px solid #5a6f54;
+    box-shadow: 0 0 20px 5px rgba(60, 130, 180, 0.3);
+    background: #f9fbf9; /* fresh snow */
   }
   .carousel img {
     position: absolute;
@@ -49,7 +53,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.2s ease-in-out;
   }
   .carousel img.active {
     opacity: 1;
@@ -58,12 +62,12 @@
 </style>
 </head>
 <body>
-  <div class="welcome-box">
-    <h1>Welcome to RIT Alpine Ski Club!</h1>
+  <div class="welcome-box" role="banner">
+    <h1>Welcome to Ski Club</h1>
   </div>
 
   <div class="carousel" aria-label="Ski Club photo carousel">
-    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Snowy mountain peak" class="active" />
+    <img src="https://drive.google.com/uc?export=view&id=1-watJgXYJfcZNEkRVNQdvV9To3EGUT0Z" alt="Snowy mountain peak" class="active" />
     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Skiers on a slope" />
     <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80" alt="Snow-covered trees" />
   </div>
@@ -79,7 +83,7 @@
     images[current].classList.add('active');
   }
 
-  setInterval(rotateImages, 4000); // Change image every 4 seconds
+  setInterval(rotateImages, 4000);
 </script>
 </body>
 </html>
