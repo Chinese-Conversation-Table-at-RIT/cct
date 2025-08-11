@@ -5,7 +5,7 @@
 
 <section>
 	<h1>
-        Welcome to the Chinese Conversation Table
+        Welcome to the Ski Club
 	</h1>
 
 	<h2>
