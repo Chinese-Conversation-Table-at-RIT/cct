@@ -8,15 +8,17 @@
 
 	<div class="info-box">
 		<p>
-			Thrilled you’ve landed here! We gather weekly at [time/place] to speak Chinese, spark engaging discussions, share presentations, and enjoy games — all designed to help you learn and connect.  
+			Our mission is to bring together Mandarin learners and speakers at RIT and create a welcoming and helpful environment for language practice and cultural connection.
+			 We gather weekly at 4pm Fridays at EAS-3367 to speak Chinese, spark engaging discussions, share presentations, and enjoy games — all designed to help you learn and connect.  
 			No matter your skill level, you’re invited to drop in anytime.  
 			Check the schedule tab above or drop us an email to say hello.  
 			Come ready to learn, laugh, and make new friends. See you soon! <br/><br/>
 
-			很高兴你来到这里！我们每周在[时间/地点]聚会，一起说中文、激发讨论、分享演示文稿、享受游戏——所有这些都是为了帮助你学习和交流。
-			无论你的水平如何，我们都欢迎你随时加入。
-			请查看上方的时间表标签，或给我们发送电子邮件打个招呼。
-			准备好学习、欢笑、结交新朋友吧！期待下次相见！ a
+			我们的使命是将罗切斯特理工学院 (RIT) 的普通话学习者和母语使用者聚集在一起，营造一个热情友好的环境，促进语言练习和文化交流。
+我们每周五下午 4 点在 EAS-3367 聚会，一起学习中文、激发讨论、分享演示文稿、享受游戏——所有这些都旨在帮助您学习和建立联系。
+无论您的水平如何，我们都欢迎您随时加入。
+请查看上方的时间表标签，或发送电子邮件给我们。
+准备好学习、欢笑，并结交新朋友吧！期待与您再次相见！
 		</p>
 	</div>
 </section>
