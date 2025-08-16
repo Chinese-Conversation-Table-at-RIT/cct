@@ -52,7 +52,8 @@
 
   <!-- Instagram -->
   <h2>
-    <a href="cctinsta"
+<!--TODO: add href="ourInstagramLink"      -->
+    <a
        target="_blank" rel="noopener noreferrer" aria-label="Instagram">
       <img src="/insta.jpg" alt="Instagram logo" style="height: 100px; width: auto;" />
     </a>
