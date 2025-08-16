@@ -32,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/Chinese-Conversation-Table-at-RIT/cct/tree/main">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
